@@ -1,0 +1,27 @@
+{
+  "pipeline": "raw",
+  "collection": "medical_rag_raw",
+  "records": 539,
+  "records_indexed": 538,
+  "chunks": 574,
+  "multi_chunk_records": 20,
+  "dataset_version": "482503f647648475",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "chunk_size": 1000,
+  "chunk_overlap": 200,
+  "top_k": 10,
+  "chunk_fetch_multiplier": 3,
+  "distance_metric": "cosine",
+  "lowercase_documents": false,
+  "eval_k_values": [
+    1,
+    3,
+    5,
+    10
+  ],
+  "ndcg_k_values": [
+    5,
+    10
+  ],
+  "exclude_leaked_eval_questions": true
+}

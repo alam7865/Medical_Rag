@@ -1,0 +1,53 @@
+{
+  "pipeline": "raw",
+  "split": "test",
+  "n_questions": 131,
+  "metrics": {
+    "recall@1": 0.48855,
+    "recall@3": 0.816794,
+    "recall@5": 0.900763,
+    "recall@10": 0.977099,
+    "precision@1": 0.48855,
+    "precision@3": 0.501272,
+    "precision@5": 0.418321,
+    "precision@10": 0.28626,
+    "mrr": 0.665255,
+    "ndcg@5": 0.557286,
+    "ndcg@10": 0.654921,
+    "semantic_similarity_top1": 0.657002,
+    "semantic_similarity_best_top5": 0.968969
+  },
+  "eval_set": {
+    "total_rows": 139,
+    "empty_question_or_answer": 1,
+    "leaked_from_train_exact_or_normalized": 6,
+    "answer_not_in_corpus": 1,
+    "evaluated": 131
+  },
+  "corpus_records": 539,
+  "index_chunks": 574,
+  "dataset_version": {
+    "corpus": "482503f647648475",
+    "eval": "3b5cdc616dcf8f7a"
+  },
+  "experiment_settings": {
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "top_k": 10,
+    "chunk_fetch_multiplier": 3,
+    "distance_metric": "cosine",
+    "lowercase_documents": false,
+    "eval_k_values": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "ndcg_k_values": [
+      5,
+      10
+    ],
+    "exclude_leaked_eval_questions": true
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "total_rows": 539,
+  "null_rows": 17,
+  "empty_questions": 8,
+  "empty_answers": 23,
+  "malformed_rows": 4,
+  "too_short_rows": 11,
+  "invalid_rows": 46,
+  "exact_duplicate_questions_detected": 68,
+  "normalized_duplicate_questions_detected": 100,
+  "exact_duplicates": 65,
+  "normalized_duplicates": 29,
+  "conflicting_answer_rows_flagged": 12,
+  "semantic_duplicate_pairs_flagged": 9,
+  "final_rows": 399,
+  "removed_by_reason": {
+    "exact_duplicate_qa_pair": 65,
+    "normalized_duplicate_qa_pair": 29,
+    "empty_answer": 14,
+    "too_short_answer": 11,
+    "null_answer": 9,
+    "null_question": 7,
+    "malformed_question": 4,
+    "null_question_and_answer": 1
+  },
+  "normalization_operations": {
+    "unicode_normalized": 42,
+    "whitespace_normalized": 113,
+    "html_removed": 106,
+    "boilerplate_removed": 82
+  },
+  "settings": {
+    "min_question_chars": 10,
+    "min_answer_chars": 20,
+    "lowercase_documents": false,
+    "semantic_dup_threshold": 0.95
+  },
+  "input_file": "train.csv",
+  "input_version": "482503f647648475",
+  "output_version": "4f2cb31a69052d53"
+}

@@ -1,0 +1,10 @@
+question_id,similar_to,similarity,question,similar_question
+train-0c910e332345-0,train-fc51cbb9cadc-0,0.9803,What are the signs of osteoarthritis?,What are the symptoms of osteoarthritis?
+train-973e7f387d80-0,train-3c4ffc61430d-0,0.979,What are the symptoms of type 2 diabetes?,What are the signs of type 2 diabetes?
+train-7ec0bcfd85d5-0,train-0ac90aff4cd7-0,0.9585,What are the symptoms of chickenpox?,What are the signs of chickenpox?
+train-23b2e74ab6ed-0,train-c07f65759e63-0,0.956,Which test shows if I have underactive thyroid?,Which test shows if I have overactive thyroid?
+train-3e1f523b7431-0,train-febd740ea33b-0,0.9803,What are the symptoms of urinary tract infection?,What are the signs of urinary tract infection?
+train-01e95037092a-0,train-9ac6ca6ba8e3-0,0.9777,What are the signs of migraine?,What are the symptoms of migraine?
+train-daee682a8b1a-0,train-4c1a6a1051d4-0,0.9777,What are the symptoms of pneumonia?,What are the signs of pneumonia?
+train-3cd651cf48f7-0,train-e69409312b5e-0,0.9778,What are the signs of kidney stones?,what are the symptoms of kidney stones?
+train-4e1b585ce4cb-0,train-d91e43f5dc19-0,0.9711,What are the signs of influenza?,What are the symptoms of influenza?

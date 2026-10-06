@@ -1,0 +1,109 @@
+question_id,question,nearest_left_id,nearest_left_question,similarity,pair
+validate-9bdb500a6159-0,What are the symptoms of iron-deficiency anemia?,train-03f231943812-0,What are the signs of iron-deficiency anemia?,0.9857,train-validate
+validate-3344cfa4ef15-0,What are the signs of type 1 diabetes?,train-8bbf9824385e-0,What are the symptoms of type 1 diabetes?,0.9801,train-validate
+validate-09972f45e6fd-0,What are the signs of rheumatoid arthritis?,train-da565e79d6d7-0,What are the symptoms of rheumatoid arthritis?,0.979,train-validate
+validate-2e466ad70b82-0,What are the signs of psoriasis?,train-c62f219320ac-0,What are the symptoms of psoriasis?,0.9783,train-validate
+validate-51929b9849fa-0,What are the symptoms of osteoporosis?,train-b64ba3335f29-0,What are the signs of osteoporosis?,0.9757,train-validate
+validate-c4af440d65b5-0,What are the symptoms of hypertension?,train-f8cb5d0ec955-0,What are the signs of hypertension?,0.9737,train-validate
+validate-ba7c3be564c2-0,What are the symptoms of asthma?,train-76c474b9711a-0,What are the signs of asthma?,0.9732,train-validate
+validate-9a37f77c57d1-0,What are the signs of gout?,train-443ac640194e-0,What are the symptoms of gout?,0.9695,train-validate
+validate-999f441abc17-0,What are the symptoms of GERD?,train-c89e1ce53ee2-0,What are the signs of GERD?,0.9637,train-validate
+validate-ab479fd75978-0,How do doctors check for underactive thyroid?,train-3283ff340995-0,How do doctors check for overactive thyroid?,0.954,train-validate
+validate-d070c443fff0-0,What are the signs of stroke?,train-42e08026ebff-0,What are the symptoms of stroke?,0.9524,train-validate
+validate-fa36a6d14708-0,What are the symptoms of COPD?,train-9d1d10efd342-0,What are the signs of COPD?,0.95,train-validate
+validate-6b5a71622091-0,How do I know if I have overactive thyroid?,train-56cb0d4be712-0,How do I know if I have underactive thyroid?,0.9489,train-validate
+validate-eee6ef5f6d3c-0,How do I prevent gout?,train-b743d08c7a46-0,How can gout be prevented?,0.9379,train-validate
+validate-5229c557bd25-0,What does underactive thyroid feel like?,train-bb6b79f20eed-0,What does overactive thyroid feel like?,0.9358,train-validate
+validate-40a0fe9d19a5-0,Which symptoms does chickenpox cause?,train-7ec0bcfd85d5-0,What are the symptoms of chickenpox?,0.935,train-validate
+validate-3246a1f16eee-0,How can celiac disease be prevented?,train-761e90a1ae95-0,How do I prevent celiac disease?,0.9348,train-validate
+validate-40955ba9cf8e-0,Can scaly skin plaques be prevented?,train-59807a9887da-0,Is there a way to avoid scaly skin plaques?,0.9346,train-validate
+validate-dfa5a6bdd71b-0,How do I prevent migraine?,train-2e37d68a3c4d-0,How can migraine be prevented?,0.933,train-validate
+validate-378b02989c09-0,How do I prevent chickenpox?,train-6f4ff4b18ae9-0,How can chickenpox be prevented?,0.9322,train-validate
+validate-d08b001f2bc2-0,What is the cause of underactive thyroid?,train-8cadf18e59ce-0,What is the cause of overactive thyroid?,0.9311,train-validate
+validate-b8bed47fb952-0,How do I prevent type 1 diabetes?,train-fd5cf18589e4-0,How can type 1 diabetes be prevented?,0.93,train-validate
+validate-24727f626609-0,How is celiac disease treated?,train-140f30cd6a98-0,What are the treatments for celiac disease?,0.9277,train-validate
+validate-beccc32d0c7d-0,How do I prevent type 2 diabetes?,train-8b22c296aabb-0,How can type 2 diabetes be prevented?,0.9275,train-validate
+validate-d6a31a147e52-0,What are the symptoms of major depressive disorder?,train-92b6cd3741da-0,Which symptoms does major depressive disorder cause?,0.9261,train-validate
+validate-02aecf37219a-0,How can hypertension be prevented?,train-bf2636751900-0,How do I prevent hypertension?,0.9258,train-validate
+validate-88e109245802-0,Tell me about wheezing lung disease.,train-3be036598733-0,Explain wheezing lung disease in detail.,0.9254,train-validate
+validate-5cc0ce47f494-0,Which symptoms does urinary tract infection cause?,train-3e1f523b7431-0,What are the symptoms of urinary tract infection?,0.9229,train-validate
+validate-67acb9e98238-0,Which symptoms does type 2 diabetes cause?,train-973e7f387d80-0,What are the symptoms of type 2 diabetes?,0.9229,train-validate
+validate-0b659575a886-0,How is kidney stones treated?,train-6f2fb93a9442-0,What are the treatments for kidney stones?,0.922,train-validate
+validate-9ba46c704a51-0,What are the treatments for urinary tract infection?,train-ab01caad9df0-0,How is urinary tract infection treated?,0.9216,train-validate
+validate-6aa36349a5cb-0,Explain adult-onset diabetes in detail.,train-472369a64650-0,Tell me about adult-onset diabetes.,0.9215,train-validate
+validate-4bbeeb1b961a-0,How can constant worrying be managed?,train-72282263d78c-0,Can constant worrying be prevented?,0.9203,train-validate
+validate-46dd81831506-0,How do I prevent stroke?,train-00c1ab1aa53d-0,How can stroke be prevented?,0.919,train-validate
+validate-b380d49fe0ff-0,What are the treatments for major depressive disorder?,train-dc4437c3e1e7-0,How is major depressive disorder treated?,0.917,train-validate
+validate-a10600bf00b7-0,Can brittle bones be prevented?,train-881a795a1295-0,Is there a way to avoid brittle bones?,0.9155,train-validate
+validate-78076a5f5839-0,How is psoriasis treated?,train-219c80a6484e-0,What are the treatments for psoriasis?,0.9126,train-validate
+validate-5f9ce783b808-0,How is type 1 diabetes treated?,train-a6b22032b3e9-0,What are the treatments for type 1 diabetes?,0.9101,train-validate
+validate-999b6ac8560a-0,How can wear-and-tear arthritis be managed?,train-d7b44599879c-0,Can wear-and-tear arthritis be prevented?,0.9073,train-validate
+validate-6531138d3ffe-0,Why do people get osteoporosis?,train-f56a8fb9b6cc-0,What causes osteoporosis?,0.9071,train-validate
+validate-ff10f6622c1a-0,How is coronary artery disease treated?,train-2fa868861ae4-0,What are the treatments for coronary artery disease?,0.9066,train-validate
+validate-c614fcac7a07-0,How do I know if I have renal calculi?,train-62737771d33b-0,Which test shows if I have renal calculi?,0.9045,train-validate
+validate-8cb7b45e0040-0,Which symptoms does influenza cause?,train-d91e43f5dc19-0,What are the symptoms of influenza?,0.9042,train-validate
+validate-3eef89d6d661-0,Is there a way to avoid constant worrying?,train-72282263d78c-0,Can constant worrying be prevented?,0.9041,train-validate
+validate-2d17824d81ad-0,Tell me about juvenile diabetes.,train-64618098f757-0,How does someone develop juvenile diabetes?,0.9039,train-validate
+validate-b7852387f280-0,What are the treatments for type 2 diabetes?,train-0489a4d04ebf-0,How is type 2 diabetes treated ?,0.9034,train-validate
+validate-bf746b71ce83-0,What are the symptoms of coronary artery disease?,train-52194ceac955-0,Which symptoms does coronary artery disease cause?,0.9031,train-validate
+validate-c6bc4a899b6e-0,Is there a way to avoid overactive thyroid?,train-1e2cf8f7b8db-0,How can overactive thyroid be managed?,0.9009,train-validate
+test-f5298b3702f2-0,What are the signs of celiac disease?,train-2dce8f0931cd-0,What are the symptoms of celiac disease?,0.9832,train-test
+test-4f0bcdd83fae-0,What are the signs of hyperthyroidism?,train-d3a0b14129c7-0,What are the symptoms of hyperthyroidism?,0.979,train-test
+test-d1e49d612397-0,What are the signs of hypothyroidism?,train-ae9c55fa15aa-0,What are the symptoms of hypothyroidism?,0.9761,train-test
+test-58a3df7e48a5-0,What are the signs of generalized anxiety disorder?,train-3244a923ab3a-0,What are the symptoms of generalized anxiety disorder?,0.9739,train-test
+test-defd0f2a51b1-0,How can generalized anxiety disorder be prevented?,train-c6b448e2525e-0,How do I prevent generalized anxiety disorder?,0.9559,train-test
+test-90c7aba0db35-0,How can psoriasis be prevented?,train-141945a97d8d-0,How do I prevent psoriasis?,0.9437,train-test
+test-b9bb3687c99a-0,Is there a way to avoid severe recurring headaches?,train-ea105607f85b-0,Can severe recurring headaches be prevented?,0.9435,train-test
+test-a83ed8b3913e-0,How does someone develop overactive thyroid?,train-4b76bbcd5f19-0,How does someone develop underactive thyroid?,0.9409,train-test
+test-fde289efddcb-0,What are the treatments for iron-deficiency anemia?,train-cfd782aa87c0-0,How is iron-deficiency anemia treated?,0.9343,train-test
+test-acab788d43f4-0,How can osteoporosis be prevented?,train-92dc7fdf2265-0,How do I prevent osteoporosis?,0.9337,train-test
+test-77f7de091a4d-0,Is there a way to avoid juvenile diabetes?,train-adcc075776bf-0,Can juvenile diabetes be prevented?,0.9334,train-test
+test-a6fd37665470-0,Which symptoms does kidney stones cause?,train-e69409312b5e-0,what are the symptoms of kidney stones?,0.9329,train-test
+test-81b6fc444cf0-0,Explain severe recurring headaches in detail.,train-027f81432ab6-0,Tell me about severe recurring headaches.,0.9328,train-test
+test-ec9411d86305-0,How can severe recurring headaches be managed?,train-ea105607f85b-0,Can severe recurring headaches be prevented?,0.9305,train-test
+test-345f239b2d33-0,Can wheezing lung disease be prevented?,train-aad1ce247bb7-0,Is there a way to avoid wheezing lung disease?,0.9296,train-test
+test-2698cc0ad9ac-0,How can osteoarthritis be prevented?,train-82e2ccd97f40-0,How do I prevent osteoarthritis?,0.9285,train-test
+test-30703d66d03f-0,How can underactive thyroid be managed?,train-1e2cf8f7b8db-0,How can overactive thyroid be managed?,0.9275,train-test
+test-c8f1400052e5-0,What are the treatments for hyperthyroidism?,train-b74d1903b62a-0,"
+
+How   is   hyperthyroidism treated?
+",0.9275,train-test
+test-1ce014d611a3-0,How can rheumatoid arthritis be prevented?,train-ae0bc2f1823d-0,How do I prevent rheumatoid arthritis?,0.9268,train-test
+test-ecb1155ac4de-0,Which symptoms does osteoarthritis cause?,train-fc51cbb9cadc-0,What are the symptoms of osteoarthritis?,0.9262,train-test
+test-04bfb487acea-0,Why do people get hypothyroidism?,train-71c378853993-0,What causes hypothyroidism?,0.9248,train-test
+test-54d44d4efec9-0,Can overactive thyroid be prevented?,train-1e2cf8f7b8db-0,How can overactive thyroid be managed?,0.9247,train-test
+test-b949a6e40fde-0,How is generalized anxiety disorder treated?,train-ea477cc932c2-0,What are the treatments for generalized anxiety disorder?,0.9238,train-test
+test-6a87246c458c-0,Which symptoms does gout cause?,train-443ac640194e-0,What are the symptoms of gout?,0.9229,train-test
+test-ca6bf7a7341b-0,How does someone develop severe recurring headaches?,train-0214d8979d8a-0,What is the cause of severe recurring headaches?,0.9223,train-test
+test-d8e91c0109fe-0,Can uric acid arthritis be prevented?,train-27012a208851-0,Is there a way to avoid uric acid arthritis?,0.9212,train-test
+test-37f0fe3ce543-0,Can adult-onset diabetes be prevented?,train-334085d67df8-0,Is there a way to avoid adult-onset diabetes?,0.9209,train-test
+test-0fc5b22d5504-0,Tell me about chronic obstructive pulmonary disease.,train-8f2038c0902b-0,EXPLAIN CHRONIC OBSTRUCTIVE PULMONARY DISEASE IN DETAIL.,0.9208,train-test
+test-87740eb808e4-0,Is there a way to avoid acid reflux?,train-e80452d633dc-0,Can acid reflux be prevented?,0.9204,train-test
+test-a984095150cc-0,Which symptoms does type 1 diabetes cause?,train-8bbf9824385e-0,What are the symptoms of type 1 diabetes?,0.9201,train-test
+test-15ea248ef3c8-0,How do I prevent COPD?,train-4a4007a967b8-0,How can COPD be prevented?,0.9193,train-test
+test-e5fe60ed8284-0,Why do people get generalized anxiety disorder?,train-f499c684d20c-0,"
+
+What   causes   generalized anxiety disorder?
+",0.9163,train-test
+test-a9dcf236418b-0,Which symptoms does migraine cause?,train-9ac6ca6ba8e3-0,What are the symptoms of migraine?,0.9153,train-test
+test-1f1a5196ac89-0,How can celiac disease be confirmed?,train-d2d78d7397ed-0,How is celiac disease diagnosed?,0.9141,train-test
+test-f18854f683eb-0,How is osteoporosis treated?,train-58114a8ac94a-0,What are the treatments for osteoporosis?,0.905,train-test
+test-da357fd8716a-0,Explain juvenile diabetes in detail.,train-64618098f757-0,How does someone develop juvenile diabetes?,0.9037,train-test
+test-28068a4d49f4-0,How can hyperthyroidism be confirmed?,train-29594298d2b7-0,How is hyperthyroidism diagnosed?,0.9005,train-test
+test-9f14d508284b-0,What are the treatments for rheumatoid arthritis?,train-5a9736c72234-0,How is rheumatoid arthritis treated?,0.9004,train-test
+test-321c2a7a64e2-0,How is pneumonia treated?,train-ec57ccbc82c4-0,What are the treatments for pneumonia?,0.9003,train-test
+test-f455f50a1af8-0,What are the signs of coronary artery disease?,validate-bf746b71ce83-0,What are the symptoms of coronary artery disease?,0.9787,validate-test
+test-2fcfb3eb7536-0,What are the signs of major depressive disorder?,validate-d6a31a147e52-0,What are the symptoms of major depressive disorder?,0.9641,validate-test
+test-da357fd8716a-0,Explain juvenile diabetes in detail.,validate-2d17824d81ad-0,Tell me about juvenile diabetes.,0.9431,validate-test
+test-6d8634c0eb52-0,How can urinary tract infection be prevented?,validate-75e9990138e4-0,How do I prevent urinary tract infection?,0.9389,validate-test
+test-ff86f3bfcadc-0,How do I prevent kidney stones?,validate-5ad1edf4464d-0,How can kidney stones be prevented?,0.9349,validate-test
+test-27625b048a59-0,How do I prevent major depressive disorder?,validate-928c0495fad1-0,How can major depressive disorder be prevented?,0.9227,validate-test
+test-740696776a87-0,How can pneumonia be prevented?,validate-e336bb598ab0-0,How do I prevent pneumonia?,0.9206,validate-test
+test-54d44d4efec9-0,Can overactive thyroid be prevented?,validate-c6bc4a899b6e-0,Is there a way to avoid overactive thyroid?,0.9189,validate-test
+test-a94b4386a835-0,Can clogged heart arteries be prevented?,validate-f72d96eb5c10-0,Is there a way to avoid clogged heart arteries?,0.9183,validate-test
+test-fc0b140a46fe-0,Which symptoms does hypertension cause?,validate-c4af440d65b5-0,What are the symptoms of hypertension?,0.9151,validate-test
+test-18d6ca5b1eb4-0,Can underactive thyroid be prevented?,validate-2a2df10b7dd5-0,Is there a way to avoid underactive thyroid?,0.9072,validate-test
+test-a984095150cc-0,Which symptoms does type 1 diabetes cause?,validate-3344cfa4ef15-0,What are the signs of type 1 diabetes?,0.9055,validate-test
+test-513510efa568-0,Is there a way to avoid low iron?,validate-f52dff2e954d-0,Can low iron be prevented?,0.9051,validate-test
+test-39c16e4f1684-0,How do doctors check for adult-onset diabetes?,validate-5bc30dc242dd-0,How do doctors check for juvenile diabetes?,0.9043,validate-test
+test-ff6a86e25da3-0,What causes psoriasis?,validate-9a8ce90bf7a3-0,Why do people get psoriasis?,0.903,validate-test

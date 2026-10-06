@@ -1,0 +1,57 @@
+{
+  "sizes": {
+    "train": 539,
+    "validate": 132,
+    "test": 139
+  },
+  "overlaps": {
+    "train-validate": {
+      "pair": "train-validate",
+      "exact_overlap": 1,
+      "normalized_overlap": 0,
+      "semantic_candidates": 48
+    },
+    "train-test": {
+      "pair": "train-test",
+      "exact_overlap": 2,
+      "normalized_overlap": 4,
+      "semantic_candidates": 39
+    },
+    "validate-test": {
+      "pair": "validate-test",
+      "exact_overlap": 1,
+      "normalized_overlap": 0,
+      "semantic_candidates": 15
+    }
+  },
+  "semantic_threshold": 0.9,
+  "semantic_checked": true,
+  "action_exact_normalized": "EXCLUDED from evaluation (EXCLUDE_LEAKED_EVAL_QUESTIONS=true). No file was modified.",
+  "action_semantic": "reported only",
+  "overlap_ids": {
+    "train-validate": {
+      "exact": [
+        "validate-29b3b3b49f58-0"
+      ],
+      "normalized": []
+    },
+    "train-test": {
+      "exact": [
+        "test-29b3b3b49f58-0",
+        "test-65160e8e43c2-0"
+      ],
+      "normalized": [
+        "test-073600e40913-0",
+        "test-0769b7b62cfb-0",
+        "test-510d4e38c12e-0",
+        "test-56e11b503634-0"
+      ]
+    },
+    "validate-test": {
+      "exact": [
+        "test-29b3b3b49f58-0"
+      ],
+      "normalized": []
+    }
+  }
+}
