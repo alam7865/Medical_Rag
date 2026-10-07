@@ -8,6 +8,7 @@ Docs: http://127.0.0.1:8000/docs
 from __future__ import annotations
 
 import random
+import threading
 from functools import lru_cache
 from pathlib import Path
 
@@ -36,6 +37,7 @@ class Doc(BaseModel):
     question_id: str
     question: str
     answer: str
+    answer_key: str = ""  # canonical-answer hash, same rule the evaluation uses for relevance
     score: float
     cleaning_status: str | None = None  # raw docs: kept / kept_flagged / removed:<reason>
 
@@ -51,10 +53,23 @@ class CompareResponse(BaseModel):
     comparison: dict
 
 
+_init_lock = threading.Lock()
+
+
 @lru_cache(maxsize=2)
-def _retriever(variant: str) -> Retriever:
+def _build_retriever(variant: str) -> Retriever:
     cfg = get_config()
     return get_retriever(variant, get_embedding_model(cfg), cfg)
+
+
+def _retriever(variant: str) -> Retriever:
+    # Sync endpoints run on a thread pool; the page fires /health and /compare together on load.
+    # ChromaDB's client registry is not thread-safe on first creation, so build under a lock.
+    with _init_lock:
+        return _build_retriever(variant)
+
+
+_retriever.cache_clear = _build_retriever.cache_clear  # type: ignore[attr-defined]
 
 
 @lru_cache(maxsize=1)
@@ -79,7 +94,7 @@ def _retrieve(variant: str, req: RetrieveRequest) -> list[Doc]:
         raise HTTPException(status_code=503, detail=str(exc)) from exc
     status = _cleaning_status() if variant == "raw" else {}
     return [
-        Doc(rank=d.rank, question_id=d.question_id, question=d.question, answer=d.answer, score=d.score,
+        Doc(rank=d.rank, question_id=d.question_id, question=d.question, answer=d.answer, answer_key=d.answer_key, score=d.score,
             cleaning_status=status.get(d.question_id))
         for d in docs
     ]

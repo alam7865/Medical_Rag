@@ -68,3 +68,15 @@ def test_raw_results_carry_cleaning_status(client, tiny_dataset):
     statuses = [d["cleaning_status"] for d in body["raw_results"]]
     assert any(s and s.startswith("removed:") for s in statuses)
     assert all(d["cleaning_status"] is None for d in body["cleaned_results"])
+
+
+def test_concurrent_first_requests_do_not_crash(client):
+    """Regression: parallel cold-start requests used to race inside ChromaDB's client registry."""
+    from concurrent.futures import ThreadPoolExecutor
+
+    from src.api import app as api
+    api._retriever.cache_clear()
+    calls = [lambda: client.get("/health"), lambda: client.post("/compare", json={"question": "How is asthma treated?", "top_k": 2})] * 4
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        codes = [f.result().status_code for f in [pool.submit(c) for c in calls]]
+    assert all(c == 200 for c in codes)

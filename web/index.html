@@ -501,17 +501,23 @@
   $("#form").addEventListener("submit", (e) => { e.preventDefault(); run(); });
 
   // ---------- compare ----------
+  // Duplicate record  = same question AND same answer (what cleaning removes).
+  // Same answer only  = a different question sharing the correct answer - legitimate, shown neutrally.
   function analyse(results) {
-    const seen = new Map();
+    const seenRecord = new Map(), seenAnswer = new Map();
     return results.map((d) => {
-      const key = norm(d.answer);
-      const empty = !key;
-      const dupOf = !empty && seen.has(key) ? seen.get(key) : null;
-      if (!empty && !seen.has(key)) seen.set(key, d.rank);
+      // Prefer the backend's answer_key (strips markup, Unicode noise and boilerplate exactly like the evaluation).
+      const key = d.answer_key || norm(d.answer);
+      const empty = !norm(d.answer);
+      const recKey = norm(d.question) + "\u241f" + key;
+      const dupOf = !empty && seenRecord.has(recKey) ? seenRecord.get(recKey) : null;
+      const sameAnswerAs = !empty && !dupOf && seenAnswer.has(key) ? seenAnswer.get(key) : null;
+      if (!empty && !seenRecord.has(recKey)) seenRecord.set(recKey, d.rank);
+      if (!empty && !seenAnswer.has(key)) seenAnswer.set(key, d.rank);
       const st = d.cleaning_status || "";
       const removed = st.startsWith("removed:") ? st.slice(8) : null;
       const junk = empty || (removed && !removed.includes("duplicate"));
-      return { ...d, empty, dupOf, removed, flagged: st === "kept_flagged", junk };
+      return { ...d, empty, dupOf, sameAnswerAs, removed, flagged: st === "kept_flagged", junk };
     });
   }
 
@@ -522,6 +528,7 @@
     if (d.empty) badges.push(`<span class="badge bad">⚠ Empty answer</span>`);
     if (d.removed) badges.push(`<span class="badge ${d.removed.includes("duplicate") ? "warn" : "bad"}">🗑 Removed by cleaning: ${esc(pretty(d.removed))}</span>`);
     if (d.dupOf) badges.push(`<span class="badge warn">⧉ Duplicate of #${d.dupOf}</span>`);
+    if (d.sameAnswerAs) badges.push(`<span class="badge neutral" title="Different question, same answer">↺ Same answer as #${d.sameAnswerAs}</span>`);
     if (d.flagged) badges.push(`<span class="badge neutral">⚑ Flagged for review</span>`);
     if (lane === "clean" && !badges.length) badges.push(`<span class="badge good">✓ Clean record</span>`);
     const pct = Math.max(0, Math.min(1, d.score)) * 100;
