@@ -1,5 +1,10 @@
 # Medical RAG: Raw Data vs Cleaned Data
 
+[![Live demo](https://img.shields.io/badge/Live%20demo-alam7865.github.io%2FMedical__Rag-eb6834?style=for-the-badge)](https://alam7865.github.io/Medical_Rag/)
+[![Deploy](https://github.com/alam7865/Medical_Rag/actions/workflows/pages.yml/badge.svg)](https://github.com/alam7865/Medical_Rag/actions/workflows/pages.yml)
+
+**▶ Try it: https://alam7865.github.io/Medical_Rag/**. Ask a medical question and compare Raw vs Cleaned retrieval side by side. Everything runs in your browser, and the first load downloads the ~90 MB embedding model once.
+
 A retrieval experiment that answers one question: **does cleaning the knowledge corpus improve RAG retrieval?**
 
 Two retrieval pipelines are built from the same `train.csv`. One indexes the data as-is (**Raw RAG**) and the other indexes a cleaned copy (**Cleaned RAG**). Both are scored on the same held-out questions with the same metrics. The two pipelines share every setting, so the corpus is the only thing that differs.
