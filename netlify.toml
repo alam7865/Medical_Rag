@@ -1,0 +1,18 @@
+# Static deployment of the Medical RAG demo.
+# No build step on Netlify: web/ is generated locally by `python scripts/export_static_site.py`
+# (it needs the ChromaDB indexes, which are not in git) and committed.
+[build]
+  publish = "web"
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"

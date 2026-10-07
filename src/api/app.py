@@ -90,6 +90,12 @@ def ui() -> FileResponse:
     return FileResponse(STATIC_DIR / "index.html")
 
 
+@app.get("/data/manifest.json", include_in_schema=False)
+def manifest() -> dict:
+    """The UI probes this path: the static (Netlify) build ships a real manifest, the server says 'api'."""
+    return {"mode": "api"}
+
+
 @app.get("/metrics")
 def metrics() -> dict:
     """Offline evaluation summary + cleaning report, for the UI dashboard."""

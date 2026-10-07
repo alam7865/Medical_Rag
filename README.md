@@ -209,6 +209,22 @@ A single-page frontend (`src/api/static/index.html`, plain HTML/CSS/JS with no b
 - **Offline evaluation dashboard**: Raw vs Cleaned metric bars, the cleaning funnel, and the error-analysis summary.
 - Top-K switch (3/5/10), example questions drawn from the *validation* split (never test), shareable links (`/?q=...&k=5`), light/dark theme, and a mobile layout. Press `/` to focus the search box.
 
+### Live demo on Netlify (static, no server)
+
+The same UI also runs **entirely in the browser**, so it can be hosted on Netlify for free:
+
+- `scripts/export_static_site.py` exports both ChromaDB indexes (chunk embeddings + records, ~2.4 MB), the metrics and the example questions into `web/`.
+- In the browser, [transformers.js](https://github.com/huggingface/transformers.js) embeds the question with `Xenova/all-MiniLM-L6-v2`, the ONNX build of the same model. `rag-engine.js` then does exact cosine search and the same chunk-to-record collapsing as `retriever.py`.
+- **Parity check:** on all 131 test questions the fp32 in-browser model gives the same top-1 as Python 131/131 times, with identical Recall@1 and MRR for both pipelines. The first visit downloads the model once (~90 MB, then cached). For a ~23 MB download, set `"js_dtype": "q8"` in `export_static_site.py`, at the cost of ~1% metric drift.
+- The page finds out which mode it's in by fetching `data/manifest.json`, which `{"mode": "static"}` on Netlify and `{"mode": "api"}` from FastAPI.
+
+Deploy:
+```bash
+python scripts/export_static_site.py     # regenerate web/ after any pipeline change
+git add web && git commit -m "Update static site" && git push
+```
+In Netlify: **Add new site → Import an existing project → GitHub → this repo**. `netlify.toml` already sets the publish directory to `web/` and needs no build command, so each push redeploys. Test locally with `python -m http.server -d web 8899`.
+
 ### API
 
 | Endpoint | Body | Returns |
@@ -217,6 +233,7 @@ A single-page frontend (`src/api/static/index.html`, plain HTML/CSS/JS with no b
 | `GET /health` | — | status, model, chunk counts per index |
 | `GET /metrics` | — | evaluation summary + cleaning report (for the dashboard) |
 | `GET /examples?n=6` | — | sample questions from the validation split |
+| `GET /data/manifest.json` | — | `{"mode": "api"}` (tells the shared UI it is talking to the server) |
 | `POST /retrieve/raw` | `{"question": "...", "top_k": 5}` | ranked raw results |
 | `POST /retrieve/cleaned` | same | ranked cleaned results |
 | `POST /compare` | same | `raw_results`, `cleaned_results`, `comparison` (top-1 scores, empty/duplicate answers in raw, shared IDs) |

@@ -1,0 +1,21 @@
+{
+  "mode": "static",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "js_model": "Xenova/all-MiniLM-L6-v2",
+  "js_dtype": "fp32",
+  "pooling": "mean",
+  "normalize": true,
+  "top_k_fetch_multiplier": 3,
+  "indexes": {
+    "raw": {
+      "collection": "medical_rag_raw",
+      "chunks": 574,
+      "file": "raw.json"
+    },
+    "cleaned": {
+      "collection": "medical_rag_cleaned",
+      "chunks": 435,
+      "file": "cleaned.json"
+    }
+  }
+}
