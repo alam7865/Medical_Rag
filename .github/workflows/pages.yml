@@ -1,0 +1,40 @@
+# Publish the static demo (web/) to GitHub Pages.
+# web/ is generated locally by `python scripts/export_static_site.py` (it needs the ChromaDB
+# indexes, which are not in git), so this workflow only uploads it - there is no build step.
+name: Deploy static site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths: ["web/**", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Check the static build is present
+        run: test -f web/index.html && test -f web/data/manifest.json
+
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: web
+
+      - id: deployment
+        uses: actions/deploy-pages@v5

@@ -209,7 +209,17 @@ A single-page frontend (`src/api/static/index.html`, plain HTML/CSS/JS with no b
 - **Offline evaluation dashboard**: Raw vs Cleaned metric bars, the cleaning funnel, and the error-analysis summary.
 - Top-K switch (3/5/10), example questions drawn from the *validation* split (never test), shareable links (`/?q=...&k=5`), light/dark theme, and a mobile layout. Press `/` to focus the search box.
 
-### Live demo on Netlify (static, no server)
+### Live demo on GitHub Pages
+
+**https://alam7865.github.io/Medical_Rag/**
+
+`.github/workflows/pages.yml` publishes `web/` whenever it changes on `main`. It has no build step, because `web/` is generated locally. One-time setup: **repo → Settings → Pages → Source: GitHub Actions**. To update the site after changing the pipeline:
+```bash
+python scripts/export_static_site.py
+git add web && git commit -m "Update static site" && git push
+```
+
+### Alternative: Netlify (static, no server)
 
 The same UI also runs **entirely in the browser**, so it can be hosted on Netlify for free:
 
